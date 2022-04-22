@@ -18,28 +18,11 @@
         <button f-click="changeName2()">Click me!</button>
 
         <!-- Printing an array via created method -->
-        {{ @printArray(@animals) }}
+        {{ @printArray(@animals) }} <br><br>
 
-        <script>
-            // Instead of this object here. You can add just window.frender_data in some other script.
-            const frender_data = {
-                name: "world",
-                animals: ["lion", "zebra"],
-                changeName() {
-                    this.name = "lol"
-                },
-                changeName2() {
-                    this.name = "xd"
-                },
-                printArray(array) {
-                    return array.join(" ")
-                }
-            } 
+        <button f-click="add(-1)">-</button> {{ @num }} <button f-click="add(1)">+</button>
 
-            setTimeout(() => {
-                frender_data.changeName()
-            }, 1000)
-        </script>
+        <script src="script.js"></script>
 
         <!-- Importing frender -->
         <script src="../src/index.js" type="module"></script>
