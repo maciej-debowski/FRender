@@ -5,9 +5,6 @@ It works on almost every browser.
 It's Super Fast, and it's only 20KB of JavaScript.
 It's super easy to learn & master because of it's simplicity.
 
-# Where are components?
-I'll do components ASAP.
-
 # A Liblary or Framework
 Kinda stupid question, yeah.
 So basiclly, Liblary is a thing which is used by developer's code. And framework runs developer's code.
