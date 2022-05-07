@@ -1,15 +1,30 @@
 // Data for FRender
 
+class HelloComponent {
+    constructor() {}
+
+    name = "HelloComponent"
+    scopedCSS = `.heading { color: red; }`;
+    data() {
+        return {
+            name: "World",
+            changeName(scope) {
+                this[scope + "name"] = "You"
+            }
+        }
+    }
+
+    render() {
+        return `<div>
+            <h1 class="heading">Hello, {{ @name }} !</h1>
+            <button f-click="changeName($)">Change name</button>
+        </div>`;
+    }
+}
+
 const data = {
-    name: "world",
     animals: ["lion", "zebra"],
     num: 1,
-    changeName() {
-        this.name = "lol"
-    },
-    changeName2() {
-        this.name = "xd"
-    },
     printArray(array) {
         return array.join(" ")
     },
@@ -18,8 +33,5 @@ const data = {
     }
 } 
 
-setTimeout(() => {
-    data.changeName()
-}, 1000)
-
 window.frender_data = data
+window.frender_components = [ HelloComponent ]

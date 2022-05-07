@@ -8,19 +8,25 @@
     </head>
     <!-- frender-app attribute says to frender that it's a root of the project -->
     <body frender-app>
-
-        <h1>
-            <!-- The @ prefix here in {{  }} is saying to frender that this is an state property so, frender could take it from frender_data object. -->
-            Hello, {{ @name }}!
-        </h1>
-
+        <!-- The @ prefix here in {{  }} is saying to frender that this is an state property so, frender could take it from frender_data object. -->
         <!-- Using f-EVENTNAME attributes you can't use @ prefix to say frender that's a method from frender_data object. Frender automatically will bind it -->
-        <button f-click="changeName2()">Click me!</button>
 
         <!-- Printing an array via created method -->
         {{ @printArray(@animals) }} <br><br>
 
-        <button f-click="add(-1)">-</button> {{ @num }} <button f-click="add(1)">+</button>
+        <button f-click="add(-1)"> - </button> {{ @num }} <button f-click="add(1)"> + </button>
+        
+        <br><br>
+
+        <HelloComponent></HelloComponent>
+
+        <br><br>
+        <input type="text" f-input="add(1)">
+        <br><br>
+        <textarea type="text" f-input="add(1)"></textarea>
+        <input type="checkbox" name="" id="">
+
+        <br><br>
 
         <script src="script.js"></script>
 
